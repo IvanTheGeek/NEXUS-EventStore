@@ -47,3 +47,11 @@ The working SQLite index under `graph/working/index/` is treated as derived loca
 - it should not be committed to Git
 
 The root `.gitignore` already keeps those SQLite files local.
+
+## External Package Guidance
+
+This repo inherits the broader NEXUS rule:
+
+- check official package docs and examples first
+- then use local package-reference notes for repo-specific operational workflows and gotchas
+- add or update a local note under [`docs/reference/packages/README.md`](docs/reference/packages/README.md) only when this repo develops stronger local package behavior
