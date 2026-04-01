@@ -1,0 +1,4 @@
+source_repo = "NEXUS-EMERGING"
+source_commit = "0d547e6fc2893a4c99a25370fed5c47e742c46b6"
+extraction_date = "2026-04-01"
+extraction_style = "curated bootstrap"
