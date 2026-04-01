@@ -25,15 +25,18 @@ Read in this order before substantial work:
 Working rules:
 
 - do not rely on chat memory alone for project understanding
+- when a task depends on an external package or tool library, check the package's official docs entry point, onboarding docs, and examples before inferring behavior from local outputs or implementation details
 - keep canonical history, durable docs, and derived working data distinct
 - treat committed event-store files as durable historical record unless a documented policy says otherwise
 - keep derived local SQLite indexes untracked
 - when operational expectations change, update the durable docs and runbooks
 - never guess the current store shape when it can be inspected directly
 - prefer `main` as the steady-state branch unless a temporary side branch truly needs an independent cadence
+- inherit the NEXUS-wide package-guidance rule by default and add or update a local note under [`docs/reference/packages/README.md`](docs/reference/packages/README.md) only when this repo has stronger package-specific operational behavior
 
 Primary references:
 
 - [`docs/agent-readme.md`](docs/agent-readme.md)
 - [`docs/current-focus.md`](docs/current-focus.md)
+- [`docs/reference/packages/README.md`](docs/reference/packages/README.md)
 - [`docs/v0-layout-and-toml.md`](docs/v0-layout-and-toml.md)
