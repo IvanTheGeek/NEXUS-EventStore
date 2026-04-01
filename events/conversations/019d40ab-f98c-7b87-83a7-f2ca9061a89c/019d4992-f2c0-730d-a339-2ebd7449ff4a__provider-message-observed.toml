@@ -1,0 +1,55 @@
+schema_version = 1
+event_id = "019d4992-f2c0-730d-a339-2ebd7449ff4a"
+event_kind = "provider_message_observed"
+stream_kind = "conversation"
+stream_id = "019d40ab-f98c-7b87-83a7-f2ca9061a89c"
+conversation_id = "019d40ab-f98c-7b87-83a7-f2ca9061a89c"
+message_id = "019d4992-f2c0-7bbc-9637-53727be5d6c1"
+domain_id = "ingestion"
+bounded_context_id = "canonical-history"
+occurred_at = "2026-03-31T02:57:56.985Z"
+observed_at = "2026-04-01T15:04:18.653877Z"
+imported_at = "2026-04-01T15:04:18.653877Z"
+source_acquisition = "local_session_export"
+normalization_version = "codex-sessions-v1"
+import_id = "019d4992-ebdd-75cb-8be2-f6ae46bf96c1"
+
+[content_hash]
+algorithm = "sha256"
+value = "f7c5e810a2382f0eb8a0a79da76f0d52c748cd1b1b50c082928b6559fdfc296d"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "conversation_object"
+native_id = "019d40a3-6ee0-7ae2-b138-5f7d03158065"
+conversation_native_id = "019d40a3-6ee0-7ae2-b138-5f7d03158065"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-001944-agent_message"
+conversation_native_id = "019d40a3-6ee0-7ae2-b138-5f7d03158065"
+message_native_id = "line-001944-agent_message"
+
+[[raw_objects]]
+kind = "session_index"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/session_index.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session index JSONL"
+
+[[raw_objects]]
+kind = "session_transcript"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/sessions/2026/03/30/rollout-2026-03-30T17-25-45-019d40a3-6ee0-7ae2-b138-5f7d03158065.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session transcript JSONL"
+
+[body]
+provider_message_id = "line-001944-agent_message"
+role = "assistant"
+model_name = "gpt-5.4"
+sequence_hint = 246
+
+[[body.segments]]
+kind = "plain_text"
+text = "There are 42 out-of-site links at the moment. Most are not accidents; they’re citations into `NEXUS-EventStore`, plus a smaller set that jump to repo-root or `NEXUS-Code`, so the right move is more about policy than mass search-and-replace."
+

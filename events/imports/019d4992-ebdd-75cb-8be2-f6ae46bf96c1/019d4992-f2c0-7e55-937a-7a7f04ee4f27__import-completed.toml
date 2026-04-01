@@ -1,0 +1,38 @@
+schema_version = 1
+event_id = "019d4992-f2c0-7e55-937a-7a7f04ee4f27"
+event_kind = "import_completed"
+stream_kind = "import"
+stream_id = "019d4992-ebdd-75cb-8be2-f6ae46bf96c1"
+artifact_id = "019d4992-ebdd-720b-a547-6b667790c5b7"
+domain_id = "ingestion"
+bounded_context_id = "canonical-history"
+observed_at = "2026-04-01T15:04:18.653877Z"
+imported_at = "2026-04-01T15:04:18.653877Z"
+source_acquisition = "local_session_export"
+normalization_version = "codex-sessions-v1"
+import_id = "019d4992-ebdd-75cb-8be2-f6ae46bf96c1"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "export_artifact"
+native_id = "session_index.jsonl"
+
+[[raw_objects]]
+kind = "session_index"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/session_index.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session index JSONL"
+
+[body]
+import_id = "019d4992-ebdd-75cb-8be2-f6ae46bf96c1"
+notes = "Imported Codex local session export snapshot 2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c."
+
+[body.counts]
+conversations_seen = 2
+messages_seen = 4886
+artifacts_referenced = 0
+new_events_appended = 362
+duplicates_skipped = 4528
+revisions_observed = 0
+reparse_observations_appended = 0
+

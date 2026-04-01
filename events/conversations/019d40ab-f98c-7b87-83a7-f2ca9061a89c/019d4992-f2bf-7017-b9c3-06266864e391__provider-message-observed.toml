@@ -1,0 +1,55 @@
+schema_version = 1
+event_id = "019d4992-f2bf-7017-b9c3-06266864e391"
+event_kind = "provider_message_observed"
+stream_kind = "conversation"
+stream_id = "019d40ab-f98c-7b87-83a7-f2ca9061a89c"
+conversation_id = "019d40ab-f98c-7b87-83a7-f2ca9061a89c"
+message_id = "019d4992-f2bf-7f57-b6ea-7e36ad29e939"
+domain_id = "ingestion"
+bounded_context_id = "canonical-history"
+occurred_at = "2026-03-31T02:17:56.538Z"
+observed_at = "2026-04-01T15:04:18.653877Z"
+imported_at = "2026-04-01T15:04:18.653877Z"
+source_acquisition = "local_session_export"
+normalization_version = "codex-sessions-v1"
+import_id = "019d4992-ebdd-75cb-8be2-f6ae46bf96c1"
+
+[content_hash]
+algorithm = "sha256"
+value = "6702778b22fb210b196940def234608b33a5ea58d21e0711afad36b29e630516"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "conversation_object"
+native_id = "019d40a3-6ee0-7ae2-b138-5f7d03158065"
+conversation_native_id = "019d40a3-6ee0-7ae2-b138-5f7d03158065"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-001586-agent_message"
+conversation_native_id = "019d40a3-6ee0-7ae2-b138-5f7d03158065"
+message_native_id = "line-001586-agent_message"
+
+[[raw_objects]]
+kind = "session_index"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/session_index.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session index JSONL"
+
+[[raw_objects]]
+kind = "session_transcript"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/sessions/2026/03/30/rollout-2026-03-30T17-25-45-019d40a3-6ee0-7ae2-b138-5f7d03158065.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session transcript JSONL"
+
+[body]
+provider_message_id = "line-001586-agent_message"
+role = "assistant"
+model_name = "gpt-5.4"
+sequence_hint = 194
+
+[[body.segments]]
+kind = "plain_text"
+text = "I’m editing the navbar template and stylesheet together now. The plan is a compact left-hand `Ivan / The / Geek` stack that links to `IvanTheGeek.com`, followed by the existing `NEXUS` brand link back to the docs root."
+

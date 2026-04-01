@@ -1,0 +1,55 @@
+schema_version = 1
+event_id = "019d4992-f2be-7152-908c-88e981596f56"
+event_kind = "provider_message_observed"
+stream_kind = "conversation"
+stream_id = "019d1a55-9f2f-7283-a6ef-fb48cb23bf6f"
+conversation_id = "019d1a55-9f2f-7283-a6ef-fb48cb23bf6f"
+message_id = "019d4992-f2be-78ab-990e-6a54e74b9e42"
+domain_id = "ingestion"
+bounded_context_id = "canonical-history"
+occurred_at = "2026-04-01T13:40:46.039Z"
+observed_at = "2026-04-01T15:04:18.653877Z"
+imported_at = "2026-04-01T15:04:18.653877Z"
+source_acquisition = "local_session_export"
+normalization_version = "codex-sessions-v1"
+import_id = "019d4992-ebdd-75cb-8be2-f6ae46bf96c1"
+
+[content_hash]
+algorithm = "sha256"
+value = "dbd5477d8320354bf75245b8d0df81922f96d8d69a4ec395a722e4f6a0ac9945"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "conversation_object"
+native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045769-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045769-agent_message"
+
+[[raw_objects]]
+kind = "session_index"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/session_index.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session index JSONL"
+
+[[raw_objects]]
+kind = "session_transcript"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/sessions/2026/03/22/rollout-2026-03-22T16-33-51-019d1741-0a08-7121-9253-044af381b61a.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session transcript JSONL"
+
+[body]
+provider_message_id = "line-045769-agent_message"
+role = "assistant"
+model_name = "gpt-5.4"
+sequence_hint = 4568
+
+[[body.segments]]
+kind = "plain_text"
+text = "I’m adding one small durable note before I refresh the hooks: if the NEXUS CLI repo path/worktree changes, rerun the installer. That’s the exact seam that caused this stale-path break, and it should be visible to the next agent instead of living only in this fix session."
+

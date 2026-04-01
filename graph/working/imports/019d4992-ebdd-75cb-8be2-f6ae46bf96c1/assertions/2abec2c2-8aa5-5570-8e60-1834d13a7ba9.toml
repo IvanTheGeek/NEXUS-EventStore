@@ -1,0 +1,973 @@
+schema_version = 1
+assertion_kind = "graph_assertion"
+fact_id = "2abec2c2-8aa5-5570-8e60-1834d13a7ba9"
+subject_node_id = "019d1a55-9f2f-7283-a6ef-fb48cb23bf6f"
+predicate = "observed_during_import"
+domain_id = "ingestion"
+bounded_context_id = "canonical-history"
+
+[object]
+kind = "node_ref"
+node_id = "019d4992-ebdd-75cb-8be2-f6ae46bf96c1"
+
+[provenance]
+import_id = "019d4992-ebdd-75cb-8be2-f6ae46bf96c1"
+source_acquisition = "local_session_export"
+supporting_event_ids = ["019d4992-f2bd-73b7-bec1-e998e6c97beb", "019d4992-f2be-7020-be73-e981682ba480", "019d4992-f2be-7094-b3a2-dc2310f13b58", "019d4992-f2be-7098-9a01-89c76dbee8db", "019d4992-f2be-70fb-a6a8-095c1f6030a3", "019d4992-f2be-7105-933e-c484ac1882e2", "019d4992-f2be-7111-86b8-0d3854e4c64e", "019d4992-f2be-7116-95c0-8f37c3cc185d", "019d4992-f2be-7139-83e4-68c7ef597121", "019d4992-f2be-7152-908c-88e981596f56", "019d4992-f2be-716f-a714-9563c0cf5f61", "019d4992-f2be-71e4-8667-ff0072d071fc", "019d4992-f2be-71fd-907b-ac55917f57b0", "019d4992-f2be-725e-9d29-ae12c38f9c61", "019d4992-f2be-7282-b863-77ffb0cc6d9f", "019d4992-f2be-7285-9e75-688c72648496", "019d4992-f2be-7288-b4e8-4ff59d9555a8", "019d4992-f2be-72be-885a-efe98271617c", "019d4992-f2be-72c4-8cd4-78ada56a6537", "019d4992-f2be-72f3-b743-f089d431073e", "019d4992-f2be-7302-a73c-727fa5a2e2cd", "019d4992-f2be-730e-a5ec-e88b6cebc33b", "019d4992-f2be-7322-9475-50ad9eef54c1", "019d4992-f2be-7338-8004-ff8967f8eda3", "019d4992-f2be-7349-ab89-856bca55e016", "019d4992-f2be-738c-bd4d-0e698684b33e", "019d4992-f2be-738e-8242-047697dbe685", "019d4992-f2be-7391-83cf-19ecfc8eb68e", "019d4992-f2be-7391-b249-be35f37126c6", "019d4992-f2be-73bf-9543-6b78389bc14c", "019d4992-f2be-740e-af79-db1600727541", "019d4992-f2be-741e-9143-5a0f05f14d53", "019d4992-f2be-744d-88fc-4292624ae8ca", "019d4992-f2be-7455-bc8f-77b0260f5e80", "019d4992-f2be-7472-a9b8-ecc0b2328f68", "019d4992-f2be-74e7-95f5-2fb1d90fc51c", "019d4992-f2be-74fc-bd1b-9631880424a3", "019d4992-f2be-752a-908e-a19c0b0b2b5d", "019d4992-f2be-752a-af1d-e8ac6f7a9396", "019d4992-f2be-752c-b27c-b5bb29ac2dab", "019d4992-f2be-753a-ac5b-f49e01770f8f", "019d4992-f2be-7564-b7d5-148b4394f2db", "019d4992-f2be-7585-a2e7-c025785ccdbe", "019d4992-f2be-758f-b5e0-2a974573c817", "019d4992-f2be-75bd-b2f5-ad7c0273ac7c", "019d4992-f2be-75d1-bca1-b4c296a8c01a", "019d4992-f2be-75dd-8c14-e9e7d49791a9", "019d4992-f2be-7618-a673-949fa5afbda3", "019d4992-f2be-7627-ae51-4ae475143f3d", "019d4992-f2be-7658-bde4-57863ee78a6d", "019d4992-f2be-76a6-b4ec-6b511e6f7623", "019d4992-f2be-76ce-88b7-bbbcbb2edd7c", "019d4992-f2be-771c-a98e-6b8adb2ab026", "019d4992-f2be-771d-b354-e9e19407328b", "019d4992-f2be-7730-ac9d-aa571a183c1e", "019d4992-f2be-773e-9ec4-0e6055c1b07d", "019d4992-f2be-7767-9c32-b7d8bad4f04f", "019d4992-f2be-7786-8927-dacf6e251005", "019d4992-f2be-778c-b244-bd9c8a8f05d6", "019d4992-f2be-77c8-aa11-cbaae17692a4", "019d4992-f2be-77d1-a3f1-df5abf93aa0b", "019d4992-f2be-77e0-a28b-d99e2a05149e", "019d4992-f2be-77ed-b369-10ddbca0ade3", "019d4992-f2be-783d-b108-281d5b8ed621", "019d4992-f2be-787d-92b4-e82bfe96ddad", "019d4992-f2be-7884-8b0b-fa59cdf17990", "019d4992-f2be-788e-bf6d-3ab7cc7f3f95", "019d4992-f2be-789c-87f6-1e80c4f3277f", "019d4992-f2be-7924-9376-10c8d6374434", "019d4992-f2be-7992-880e-e66c967bb8ce", "019d4992-f2be-799c-bd0c-4aea46d32a8b", "019d4992-f2be-79b2-8903-3c4e7ef92625", "019d4992-f2be-79b3-a2b9-216b297531de", "019d4992-f2be-79d3-8174-df043c7b8343", "019d4992-f2be-7a46-b33f-e07388dd6d9b", "019d4992-f2be-7a9c-80b8-0d9fa9a1c9f8", "019d4992-f2be-7aa2-aa54-6ff238ce2ceb", "019d4992-f2be-7ab5-a618-75f912261754", "019d4992-f2be-7ae2-bed6-325a9a31f6af", "019d4992-f2be-7ae3-84d2-363d39ce8f76", "019d4992-f2be-7af2-8383-77a4f6e5fa6d", "019d4992-f2be-7afa-b81f-18d775061ba7", "019d4992-f2be-7b06-ae85-c8f3829d4dc4", "019d4992-f2be-7b5a-a803-0742f41a5c00", "019d4992-f2be-7b5f-95fc-a5f3607f9b36", "019d4992-f2be-7b62-840b-6f55b999abe0", "019d4992-f2be-7b7c-a87a-d7239dd260fb", "019d4992-f2be-7b9b-ade7-e5ca03d541a7", "019d4992-f2be-7be0-b47e-e89136f77349", "019d4992-f2be-7bf9-a047-21d04100dfc9", "019d4992-f2be-7c30-8528-d27630d3f41c", "019d4992-f2be-7c3b-9e54-c52d104575f3", "019d4992-f2be-7c3f-9373-3ed884a6b527", "019d4992-f2be-7c5b-8364-5f34994238d7", "019d4992-f2be-7c7c-90c2-846d37f2d4b1", "019d4992-f2be-7c90-9b9f-eea004687e15", "019d4992-f2be-7ca1-9898-d4845c7b9ab6", "019d4992-f2be-7ca5-8e1c-5df1ae85dd87", "019d4992-f2be-7d83-8382-7d8c4c2a946a", "019d4992-f2be-7d89-96ae-af5fd561a478", "019d4992-f2be-7d8c-a398-643287a7c457", "019d4992-f2be-7d94-b528-a9c1eb7dc80e", "019d4992-f2be-7dd3-8e95-216eca2cac2f", "019d4992-f2be-7dde-aa07-bf8d71fe86b5", "019d4992-f2be-7dee-bb11-304a791d3218", "019d4992-f2be-7df9-9b6d-3456e7735591", "019d4992-f2be-7e35-bfae-dd6bcb283f5b", "019d4992-f2be-7e45-b251-2504900691b3", "019d4992-f2be-7e81-ae40-065ddba45a1e", "019d4992-f2be-7ec9-9bc0-47986052b63d", "019d4992-f2be-7f2b-989b-0842efd014d4", "019d4992-f2be-7f30-acf5-52cfd18aa9e3", "019d4992-f2be-7f43-a20d-38976bcc141f", "019d4992-f2be-7f4a-bbdb-6b4be894263b", "019d4992-f2be-7f4c-88c9-7388419b05f9", "019d4992-f2be-7f5e-ab67-7640040c2ec4", "019d4992-f2be-7f60-99ba-52dbe6693306", "019d4992-f2be-7f9c-8895-9e9ca0e7ed8a", "019d4992-f2be-7fd0-9d57-ce1a9b4232a5", "019d4992-f2be-7ff4-b0f3-4f6447f7255d", "019d4992-f2bf-7393-b351-3a205c95bacd", "019d4992-f2bf-73a3-9d75-90a7e4b6e1fe", "019d4992-f2bf-73f9-90e5-da13eb9e78b2", "019d4992-f2bf-748c-af1b-f151346cde5c", "019d4992-f2bf-748f-81bc-4d123cb83fb3", "019d4992-f2bf-7491-888f-6b57b9954c7f", "019d4992-f2bf-756f-893f-5b055a725242", "019d4992-f2bf-75a0-b040-3b58e9cdcd44", "019d4992-f2bf-7678-ae9c-753f3311aa8a", "019d4992-f2bf-7890-86ce-8c5edef086cd", "019d4992-f2bf-791b-a4c9-d506e87df17b", "019d4992-f2bf-7a69-a98b-9814bec8a05c", "019d4992-f2bf-7dc0-bf32-bcecf3a0942d", "019d4992-f2bf-7e84-954b-b5d73f808a57"]
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "conversation_object"
+native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-044976-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-044976-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-044988-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-044988-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-044994-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-044994-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045006-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045006-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045013-user_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045013-user_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045016-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045016-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045030-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045030-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045044-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045044-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045050-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045050-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045062-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045062-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045068-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045068-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045078-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045078-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045084-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045084-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045090-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045090-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045100-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045100-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045106-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045106-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045112-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045112-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045128-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045128-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045170-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045170-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045182-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045182-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045199-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045199-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045209-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045209-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045215-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045215-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045225-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045225-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045231-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045231-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045255-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045255-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045261-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045261-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045273-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045273-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045280-user_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045280-user_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045283-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045283-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045301-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045301-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045313-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045313-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045325-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045325-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045332-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045332-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045340-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045340-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045346-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045346-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045352-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045352-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045358-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045358-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045368-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045368-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045375-user_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045375-user_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045378-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045378-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045390-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045390-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045397-user_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045397-user_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045399-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045399-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045406-user_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045406-user_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045408-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045408-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045422-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045422-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045438-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045438-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045452-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045452-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045465-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045465-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045489-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045489-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045495-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045495-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045509-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045509-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045519-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045519-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045525-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045525-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045539-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045539-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045559-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045559-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045567-user_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045567-user_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045570-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045570-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045590-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045590-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045604-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045604-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045612-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045612-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045628-user_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045628-user_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045631-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045631-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045637-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045637-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045651-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045651-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045657-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045657-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045667-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045667-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045677-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045677-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045691-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045691-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045707-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045707-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045717-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045717-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045733-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045733-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045740-user_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045740-user_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045743-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045743-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045759-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045759-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045769-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045769-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045782-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045782-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045800-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045800-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045819-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045819-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045826-user_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045826-user_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045829-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045829-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045839-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045839-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045859-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045859-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045869-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045869-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045877-user_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045877-user_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045880-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045880-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045892-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045892-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045898-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045898-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045910-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045910-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045918-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045918-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045934-user_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045934-user_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045937-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045937-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045953-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045953-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045969-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045969-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045975-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045975-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045987-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045987-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046009-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046009-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046015-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046015-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046025-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046025-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046043-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046043-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046049-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046049-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046063-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046063-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046076-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046076-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046088-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046088-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046142-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046142-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046196-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046196-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046220-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046220-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046226-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046226-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046236-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046236-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046254-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046254-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046288-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046288-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046302-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046302-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046310-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046310-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046328-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046328-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046338-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046338-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046344-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046344-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046350-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046350-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046360-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046360-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046366-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046366-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046380-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046380-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046402-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046402-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046416-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046416-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046422-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046422-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046438-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046438-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046456-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046456-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046470-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046470-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046482-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046482-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046498-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046498-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046510-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046510-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046516-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046516-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046522-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046522-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046536-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046536-agent_message"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046556-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046556-agent_message"
+
+[[raw_objects]]
+kind = "session_index"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/session_index.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session index JSONL"
+
+[[raw_objects]]
+kind = "session_transcript"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/sessions/2026/03/22/rollout-2026-03-22T16-33-51-019d1741-0a08-7121-9253-044af381b61a.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session transcript JSONL"
+

@@ -1,0 +1,55 @@
+schema_version = 1
+event_id = "019d4992-f2be-76ce-88b7-bbbcbb2edd7c"
+event_kind = "provider_message_observed"
+stream_kind = "conversation"
+stream_id = "019d1a55-9f2f-7283-a6ef-fb48cb23bf6f"
+conversation_id = "019d1a55-9f2f-7283-a6ef-fb48cb23bf6f"
+message_id = "019d4992-f2be-7bbd-ae2c-ccf9e907d75e"
+domain_id = "ingestion"
+bounded_context_id = "canonical-history"
+occurred_at = "2026-03-31T01:39:37.134Z"
+observed_at = "2026-04-01T15:04:18.653877Z"
+imported_at = "2026-04-01T15:04:18.653877Z"
+source_acquisition = "local_session_export"
+normalization_version = "codex-sessions-v1"
+import_id = "019d4992-ebdd-75cb-8be2-f6ae46bf96c1"
+
+[content_hash]
+algorithm = "sha256"
+value = "9ae7ec7584a87347dc0149e74eb486f325719aaa5e9f343e1ca339ce79916db7"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "conversation_object"
+native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045390-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045390-agent_message"
+
+[[raw_objects]]
+kind = "session_index"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/session_index.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session index JSONL"
+
+[[raw_objects]]
+kind = "session_transcript"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/sessions/2026/03/22/rollout-2026-03-22T16-33-51-019d1741-0a08-7121-9253-044af381b61a.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session transcript JSONL"
+
+[body]
+provider_message_id = "line-045390-agent_message"
+role = "assistant"
+model_name = "gpt-5.4"
+sequence_hint = 4533
+
+[[body.segments]]
+kind = "plain_text"
+text = "A Git worktree is an extra checked-out folder for the same repo. It lets us have different branches open at the same time without constantly doing `git switch` in one directory.\n\nHow we used it here:\n- one worktree held the active branch\n- one temporary worktree held `main`\n- temporary merge worktrees let me merge/reconcile branches without disturbing the active folder\n\nWhy it’s useful:\n- safer branch merges\n- easier conflict resolution\n- no “wait, which branch is this folder on now?”\n- isolated working directories while still sharing the same Git history and object store\n\nWhat I changed next:\n- clarified the durable policy that `main` should be the normal steady state\n- clarified that extra worktrees are temporary operating tools, not a reason to keep branches alive\n- clarified that merged branches should have both their extra worktrees and branch refs removed when they’re done\n\nUpdated docs:\n- [AGENTS.md](/home/ivan/NEXUS/NEXUS-EMERGING/AGENTS.md)\n- [docs/collaboration-protocol.md](/home/ivan/NEXUS/NEXUS-EMERGING/docs/collaboration-protocol.md)\n- [docs/decisions/0008-branch-topology-by-workstream.md](/home/ivan/NEXUS/NEXUS-EMERGING/docs/decisions/0008-branch-topology-by-workstream.md)\n\nPolicy commit:\n- `fc10f698d` `docs: clarify worktree and branch retirement policy`\n\nRemote cleanup is done too:\n- pushed `main`\n- deleted all retired remote branches\n- pruned refs\n\nCurrent repo state:\n- local branches: `main` only\n- remote branches: `origin/main` only\n- worktrees: one only\n- worktree is clean\n\nYou can verify from:\n- [repo root](/home/ivan/NEXUS/NEXUS-EMERGING)\n\nOne important next repo-hygiene issue remains:\n- [NEXUS-EventStore/graph/working/index/graph-working.sqlite](/home/ivan/NEXUS/NEXUS-EMERGING/NEXUS-EventStore/graph/working/index/graph-working.sqlite)\n\nGitHub accepted the push, but warned that file is over the recommended 50 MB size. So the next strong move is to decide whether that working SQLite index should:\n- stay tracked\n- be regenerated and ignored\n- or move to a different storage/release pattern\n\nThat’s the next thing I’d tackle."
+

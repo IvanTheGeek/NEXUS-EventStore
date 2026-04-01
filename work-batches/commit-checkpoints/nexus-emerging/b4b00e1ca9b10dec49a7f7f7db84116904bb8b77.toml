@@ -1,0 +1,42 @@
+schema_version = 1
+checkpoint_kind = "codex_commit_checkpoint"
+repo_slug = "nexus-emerging"
+repo_root = "/home/ivan/NEXUS/NEXUS-EMERGING"
+branch_name = "main"
+remote_origin = "git@github.com:IvanTheGeek/NEXUS-EMERGING.git"
+commit_sha = "b4b00e1ca9b10dec49a7f7f7db84116904bb8b77"
+commit_short_sha = "b4b00e1c"
+commit_summary = "repo: extract eventstore into sibling repo"
+commit_message = "repo: extract eventstore into sibling repo"
+captured_at = "2026-04-01T15:04:13.672512Z"
+event_store_root = "/home/ivan/NEXUS/NEXUS-EventStore"
+snapshot_name = "2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c"
+snapshot_root = "/home/ivan/NEXUS/NEXUS-EMERGING/NEXUS-Objects/providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c"
+snapshot_manifest_relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/export-manifest.toml"
+root_artifact_relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/session_index.jsonl"
+import_id = "019d4992-ebdd-75cb-8be2-f6ae46bf96c1"
+import_manifest_relative_path = "imports/019d4992-ebdd-75cb-8be2-f6ae46bf96c1.toml"
+working_graph_manifest_relative_path = "graph/working/imports/019d4992-ebdd-75cb-8be2-f6ae46bf96c1/manifest.toml"
+working_graph_catalog_relative_path = "graph/working/catalog/import-batches.toml"
+working_graph_index_relative_path = "graph/working/index/graph-working.sqlite"
+manifest_relative_path = "work-batches/commit-checkpoints/nexus-emerging/b4b00e1ca9b10dec49a7f7f7db84116904bb8b77.toml"
+
+[import_counts]
+conversations_seen = 2
+messages_seen = 4886
+artifacts_referenced = 0
+new_events_appended = 362
+duplicates_skipped = 4528
+revisions_observed = 0
+reparse_observations_appended = 0
+
+[[conversations]]
+provider_conversation_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+title = "Add F# LLM import event system"
+message_count_hint = 4625
+
+[[conversations]]
+provider_conversation_id = "019d40a3-6ee0-7ae2-b138-5f7d03158065"
+title = "Evaluate GitHub Pages options"
+message_count_hint = 261
+

@@ -1,0 +1,55 @@
+schema_version = 1
+event_id = "019d4992-f2c0-724d-b13c-cdc157679951"
+event_kind = "provider_message_observed"
+stream_kind = "conversation"
+stream_id = "019d40ab-f98c-7b87-83a7-f2ca9061a89c"
+conversation_id = "019d40ab-f98c-7b87-83a7-f2ca9061a89c"
+message_id = "019d4992-f2c0-70f3-ad96-2eecb0dfbd43"
+domain_id = "ingestion"
+bounded_context_id = "canonical-history"
+occurred_at = "2026-03-31T03:04:01.106Z"
+observed_at = "2026-04-01T15:04:18.653877Z"
+imported_at = "2026-04-01T15:04:18.653877Z"
+source_acquisition = "local_session_export"
+normalization_version = "codex-sessions-v1"
+import_id = "019d4992-ebdd-75cb-8be2-f6ae46bf96c1"
+
+[content_hash]
+algorithm = "sha256"
+value = "3483aec8cccf952fb81d1343cbbb2412c4f6b9da5b84ec9fdd656e6818d12fc5"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "conversation_object"
+native_id = "019d40a3-6ee0-7ae2-b138-5f7d03158065"
+conversation_native_id = "019d40a3-6ee0-7ae2-b138-5f7d03158065"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-002082-agent_message"
+conversation_native_id = "019d40a3-6ee0-7ae2-b138-5f7d03158065"
+message_native_id = "line-002082-agent_message"
+
+[[raw_objects]]
+kind = "session_index"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/session_index.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session index JSONL"
+
+[[raw_objects]]
+kind = "session_transcript"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/sessions/2026/03/30/rollout-2026-03-30T17-25-45-019d40a3-6ee0-7ae2-b138-5f7d03158065.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session transcript JSONL"
+
+[body]
+provider_message_id = "line-002082-agent_message"
+role = "assistant"
+model_name = "gpt-5.4"
+sequence_hint = 261
+
+[[body.segments]]
+kind = "plain_text"
+text = "Cleaned up the remaining “outside the docs site” links and pushed it to `main` as `fd018ef34`. The repo-navigation links now point to real GitHub URLs where that’s the right artifact, like [docs/repository-concern-lines.md](/home/ivan/NEXUS/NEXUS-EMERGING/docs/repository-concern-lines.md), [docs/collaboration-protocol.md](/home/ivan/NEXUS/NEXUS-EMERGING/docs/collaboration-protocol.md), [docs/decisions/0014-repository-concern-lines-and-documentation-spine.md](/home/ivan/NEXUS/NEXUS-EMERGING/docs/decisions/0014-repository-concern-lines-and-documentation-spine.md), and [docs/how-to/export-codex-sessions.md](/home/ivan/NEXUS/NEXUS-EMERGING/docs/how-to/export-codex-sessions.md). The `NEXUS-EventStore` citation links were converted to commit-pinned GitHub blob URLs in pages like [docs/event-modeling-ui-inspiration-lineage.md](/home/ivan/NEXUS/NEXUS-EMERGING/docs/event-modeling-ui-inspiration-lineage.md) and [docs/research/penpot/codex-mcp-retrospective.md](/home/ivan/NEXUS/NEXUS-EMERGING/docs/research/penpot/codex-mcp-retrospective.md), so those references stay stable over time.\n\nI also recorded the link policy in [docs/how-to/publish-docs-site.md](/home/ivan/NEXUS/NEXUS-EMERGING/docs/how-to/publish-docs-site.md) so later edits don’t drift back into broken relative paths. Verification was a repo-wide link inventory plus `mkdocs build`; there are now `0` remaining markdown links in `docs/` that resolve outside the published site as broken relatives, and the MkDocs build completed with no warnings. GitHub Pages should be rebuilding now at [https://ivanthegeek.github.io/NEXUS-EMERGING/](https://ivanthegeek.github.io/NEXUS-EMERGING/)."
+

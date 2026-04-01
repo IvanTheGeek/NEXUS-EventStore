@@ -1,0 +1,55 @@
+schema_version = 1
+event_id = "019d4992-f2be-752c-b27c-b5bb29ac2dab"
+event_kind = "provider_message_observed"
+stream_kind = "conversation"
+stream_id = "019d1a55-9f2f-7283-a6ef-fb48cb23bf6f"
+conversation_id = "019d1a55-9f2f-7283-a6ef-fb48cb23bf6f"
+message_id = "019d4992-f2be-72b4-9dea-1b6dbd0e00c1"
+domain_id = "ingestion"
+bounded_context_id = "canonical-history"
+occurred_at = "2026-04-01T13:36:36.656Z"
+observed_at = "2026-04-01T15:04:18.653877Z"
+imported_at = "2026-04-01T15:04:18.653877Z"
+source_acquisition = "local_session_export"
+normalization_version = "codex-sessions-v1"
+import_id = "019d4992-ebdd-75cb-8be2-f6ae46bf96c1"
+
+[content_hash]
+algorithm = "sha256"
+value = "a11beb22925669d75247b39dcd7c9984df88127d6a77704faa2cac7dfbf81d1c"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "conversation_object"
+native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045733-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045733-agent_message"
+
+[[raw_objects]]
+kind = "session_index"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/session_index.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session index JSONL"
+
+[[raw_objects]]
+kind = "session_transcript"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/sessions/2026/03/22/rollout-2026-03-22T16-33-51-019d1741-0a08-7121-9253-044af381b61a.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session transcript JSONL"
+
+[body]
+provider_message_id = "line-045733-agent_message"
+role = "assistant"
+model_name = "gpt-5.4"
+sequence_hint = 4564
+
+[[body.segments]]
+kind = "plain_text"
+text = "Both repos are now in the temporary main-first state.\n\n`NEXUS-EMERGING`\n- local branches: `main` only\n- remote branches: `origin/main` only\n- worktrees: one only\n- pushed tip: `630baf66f`\n- updated directives in [AGENTS.md](/home/ivan/NEXUS/NEXUS-EMERGING/AGENTS.md), [docs/agent-readme.md](/home/ivan/NEXUS/NEXUS-EMERGING/docs/agent-readme.md), [docs/collaboration-protocol.md](/home/ivan/NEXUS/NEXUS-EMERGING/docs/collaboration-protocol.md), and [docs/decisions/0008-branch-topology-by-workstream.md](/home/ivan/NEXUS/NEXUS-EMERGING/docs/decisions/0008-branch-topology-by-workstream.md)\n- the new durable rule is: default to `main`, merge temporary side work back quickly, and do not guess when the actual repo state can be inspected\n\n`CheddarBooks`\n- merged `laundrylog-fnhci-primitive-map` into `main`\n- removed local branches `agent-memory-surfaces`, `laundrylog-event-modeling`, and `laundrylog-fnhci-primitive-map`\n- deleted remote `origin/laundrylog-event-modeling`\n- local/remote branches now: `main` / `origin/main` only\n- worktrees: one only\n- pushed tip: `f73ec95`\n- updated directives in [AGENTS.md](/home/ivan/NEXUS/CheddarBooks/AGENTS.md) and [docs/agent-readme.md](/home/ivan/NEXUS/CheddarBooks/docs/agent-readme.md)\n\nVerification\n- ran [verify-workspace-html.sh](/home/ivan/NEXUS/CheddarBooks/scripts/laundrylog/verify-workspace-html.sh) on `CheddarBooks/main`\n- `32` Expecto tests passed\n- `8` Playwright tests passed\n- committed the tracked NM artifact refresh that the verify flow produced\n\nOne residual issue remains in both repos: the Codex post-commit checkpoint hook still logs a failure against an old path, even though the Git commits themselves succeed. That’s separate from the branch cleanup.\n\nThe VM increase to `8 vCPU / 50 GB RAM` is helpful for these heavier refresh/browser flows. If you want, I can take the next pass on cleaning up that stale commit-hook config."
+

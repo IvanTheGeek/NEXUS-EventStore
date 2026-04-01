@@ -1,0 +1,55 @@
+schema_version = 1
+event_id = "019d4992-f2bf-73cb-8bcc-c25b92f4f3be"
+event_kind = "provider_message_observed"
+stream_kind = "conversation"
+stream_id = "019d40ab-f98c-7b87-83a7-f2ca9061a89c"
+conversation_id = "019d40ab-f98c-7b87-83a7-f2ca9061a89c"
+message_id = "019d4992-f2bf-7e43-9c66-a1fdd87068b7"
+domain_id = "ingestion"
+bounded_context_id = "canonical-history"
+occurred_at = "2026-03-31T02:03:31.032Z"
+observed_at = "2026-04-01T15:04:18.653877Z"
+imported_at = "2026-04-01T15:04:18.653877Z"
+source_acquisition = "local_session_export"
+normalization_version = "codex-sessions-v1"
+import_id = "019d4992-ebdd-75cb-8be2-f6ae46bf96c1"
+
+[content_hash]
+algorithm = "sha256"
+value = "18adc76feef055bc168ad00e95342c97ad36e560d660ba8e5c9883ececd46018"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "conversation_object"
+native_id = "019d40a3-6ee0-7ae2-b138-5f7d03158065"
+conversation_native_id = "019d40a3-6ee0-7ae2-b138-5f7d03158065"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-001354-agent_message"
+conversation_native_id = "019d40a3-6ee0-7ae2-b138-5f7d03158065"
+message_native_id = "line-001354-agent_message"
+
+[[raw_objects]]
+kind = "session_index"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/session_index.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session index JSONL"
+
+[[raw_objects]]
+kind = "session_transcript"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/sessions/2026/03/30/rollout-2026-03-30T17-25-45-019d40a3-6ee0-7ae2-b138-5f7d03158065.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session transcript JSONL"
+
+[body]
+provider_message_id = "line-001354-agent_message"
+role = "assistant"
+model_name = "gpt-5.4"
+sequence_hint = 168
+
+[[body.segments]]
+kind = "plain_text"
+text = "The nav cleanup is pushed on `main` as commit `26d25bb` and the GitHub Pages redeploy is already running. I expanded [mkdocs.yml](/home/ivan/NEXUS/NEXUS-EMERGING/mkdocs.yml#L1) to cover the real docs tree and updated the stale decisions index in [docs/decisions/README.md](/home/ivan/NEXUS/NEXUS-EMERGING/docs/decisions/README.md#L1). I also verified locally with `mkdocs build`; the big “not included in nav” warning set is gone.\n\nRight now the Pages workflow run for that commit is `in progress` on GitHub, so [https://ivanthegeek.github.io/NEXUS-EMERGING/](https://ivanthegeek.github.io/NEXUS-EMERGING/) should pick up the fuller sidebar as soon as that finishes. You can watch it here: [Deploy docs site workflow](https://github.com/IvanTheGeek/NEXUS-EMERGING/actions/workflows/docs-site.yml). The remaining build warnings are now the smaller set of cross-repo links to `README.md`, `NEXUS-Code`, and `NEXUS-EventStore`, which is a separate cleanup pass from the nav itself."
+

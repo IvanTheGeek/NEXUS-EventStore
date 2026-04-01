@@ -1,0 +1,30 @@
+schema_version = 1
+event_id = "019d4992-f2ac-7e78-aa48-31107d9753ce"
+event_kind = "provider_artifact_received"
+stream_kind = "import"
+stream_id = "019d4992-ebdd-75cb-8be2-f6ae46bf96c1"
+artifact_id = "019d4992-ebdd-720b-a547-6b667790c5b7"
+domain_id = "ingestion"
+bounded_context_id = "canonical-history"
+observed_at = "2026-04-01T15:04:18.653877Z"
+imported_at = "2026-04-01T15:04:18.653877Z"
+source_acquisition = "local_session_export"
+normalization_version = "codex-sessions-v1"
+import_id = "019d4992-ebdd-75cb-8be2-f6ae46bf96c1"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "export_artifact"
+native_id = "session_index.jsonl"
+
+[[raw_objects]]
+kind = "session_index"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/session_index.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session index JSONL"
+
+[body]
+provider = "codex"
+file_name = "session_index.jsonl"
+byte_count = 784
+

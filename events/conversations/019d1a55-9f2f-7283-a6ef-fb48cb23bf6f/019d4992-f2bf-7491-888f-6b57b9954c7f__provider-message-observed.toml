@@ -1,0 +1,55 @@
+schema_version = 1
+event_id = "019d4992-f2bf-7491-888f-6b57b9954c7f"
+event_kind = "provider_message_observed"
+stream_kind = "conversation"
+stream_id = "019d1a55-9f2f-7283-a6ef-fb48cb23bf6f"
+conversation_id = "019d1a55-9f2f-7283-a6ef-fb48cb23bf6f"
+message_id = "019d4992-f2bf-75d0-802c-faf5efb39bfb"
+domain_id = "ingestion"
+bounded_context_id = "canonical-history"
+occurred_at = "2026-04-01T14:56:19.159Z"
+observed_at = "2026-04-01T15:04:18.653877Z"
+imported_at = "2026-04-01T15:04:18.653877Z"
+source_acquisition = "local_session_export"
+normalization_version = "codex-sessions-v1"
+import_id = "019d4992-ebdd-75cb-8be2-f6ae46bf96c1"
+
+[content_hash]
+algorithm = "sha256"
+value = "d4a47f0b8a6e52d00f173f8352c1ca835aed15ca78a3c2b29144985a757f16a8"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "conversation_object"
+native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-046422-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-046422-agent_message"
+
+[[raw_objects]]
+kind = "session_index"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/session_index.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session index JSONL"
+
+[[raw_objects]]
+kind = "session_transcript"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/sessions/2026/03/22/rollout-2026-03-22T16-33-51-019d1741-0a08-7121-9253-044af381b61a.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session transcript JSONL"
+
+[body]
+provider_message_id = "line-046422-agent_message"
+role = "assistant"
+model_name = "gpt-5.4"
+sequence_hint = 4615
+
+[[body.segments]]
+kind = "plain_text"
+text = "The monolithic quiet `git rm` is still too slow to be a good operating path here. I’m switching to a simpler split: stop that process, remove the already-extracted subtree from the working tree directly, then let Git stage the deletions from the missing path instead of doing the whole thing through `git rm`."
+

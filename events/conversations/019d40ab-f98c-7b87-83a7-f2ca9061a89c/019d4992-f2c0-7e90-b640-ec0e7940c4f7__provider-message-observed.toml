@@ -1,0 +1,55 @@
+schema_version = 1
+event_id = "019d4992-f2c0-7e90-b640-ec0e7940c4f7"
+event_kind = "provider_message_observed"
+stream_kind = "conversation"
+stream_id = "019d40ab-f98c-7b87-83a7-f2ca9061a89c"
+conversation_id = "019d40ab-f98c-7b87-83a7-f2ca9061a89c"
+message_id = "019d4992-f2c0-7102-b0b9-9b8254258ace"
+domain_id = "ingestion"
+bounded_context_id = "canonical-history"
+occurred_at = "2026-03-31T02:58:24.997Z"
+observed_at = "2026-04-01T15:04:18.653877Z"
+imported_at = "2026-04-01T15:04:18.653877Z"
+source_acquisition = "local_session_export"
+normalization_version = "codex-sessions-v1"
+import_id = "019d4992-ebdd-75cb-8be2-f6ae46bf96c1"
+
+[content_hash]
+algorithm = "sha256"
+value = "c1560d18c9e4551ebf7dd7087a353a5da7c8425d71c500a7b1887de5e5f2ff32"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "conversation_object"
+native_id = "019d40a3-6ee0-7ae2-b138-5f7d03158065"
+conversation_native_id = "019d40a3-6ee0-7ae2-b138-5f7d03158065"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-001956-agent_message"
+conversation_native_id = "019d40a3-6ee0-7ae2-b138-5f7d03158065"
+message_native_id = "line-001956-agent_message"
+
+[[raw_objects]]
+kind = "session_index"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/session_index.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session index JSONL"
+
+[[raw_objects]]
+kind = "session_transcript"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/sessions/2026/03/30/rollout-2026-03-30T17-25-45-019d40a3-6ee0-7ae2-b138-5f7d03158065.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session transcript JSONL"
+
+[body]
+provider_message_id = "line-001956-agent_message"
+role = "assistant"
+model_name = "gpt-5.4"
+sequence_hint = 248
+
+[[body.segments]]
+kind = "plain_text"
+text = "Those are a different issue class.\n\nRight now there are 42 links in `docs/` that point outside the published MkDocs tree:\n- `32` into `NEXUS-EventStore`\n- `6` to the repo-root `README.md`\n- `4` into `NEXUS-Code`\n\nWhy they break on Pages: MkDocs only publishes the `docs/` tree. Anything linked with paths like `../README.md`, `../NEXUS-Code/...`, or `../NEXUS-EventStore/...` is outside the built site, so the page can render the link text but the target is not part of the deployed HTML site.\n\nA few examples:\n- [docs/collaboration-protocol.md](/home/ivan/NEXUS/NEXUS-EMERGING/docs/collaboration-protocol.md)\n- [docs/repository-concern-lines.md](/home/ivan/NEXUS/NEXUS-EMERGING/docs/repository-concern-lines.md)\n- [docs/how-to/export-codex-sessions.md](/home/ivan/NEXUS/NEXUS-EMERGING/docs/how-to/export-codex-sessions.md)\n- [docs/research/penpot/codex-mcp-retrospective.md](/home/ivan/NEXUS/NEXUS-EMERGING/docs/research/penpot/codex-mcp-retrospective.md)\n- [docs/application-domains/cheddarbooks/laundrylog/requirements.md](/home/ivan/NEXUS/NEXUS-EMERGING/docs/application-domains/cheddarbooks/laundrylog/requirements.md)\n\nMy recommendation is:\n- For repo-root `README.md` links: replace them with site-local equivalents where possible.\n- For `NEXUS-Code` links: either move the needed content into `docs/`, or link to the GitHub file URL instead of a relative filesystem path.\n- For `NEXUS-EventStore` links: treat them as source citations and convert them to GitHub permalinks, ideally pinned to a commit if you want stable historical references.\n\nSo the practical split is:\n- navigation links should stay inside the site\n- source/citation links can go out to GitHub on purpose\n\nIf you want, I can do the next cleanup pass and handle them in that order:\n1. fix the `README.md` and `NEXUS-Code` links first,\n2. then convert the `NEXUS-EventStore` citations to proper GitHub permalinks."
+

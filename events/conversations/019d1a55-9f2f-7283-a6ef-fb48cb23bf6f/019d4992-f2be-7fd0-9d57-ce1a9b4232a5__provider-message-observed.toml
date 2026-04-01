@@ -1,0 +1,55 @@
+schema_version = 1
+event_id = "019d4992-f2be-7fd0-9d57-ce1a9b4232a5"
+event_kind = "provider_message_observed"
+stream_kind = "conversation"
+stream_id = "019d1a55-9f2f-7283-a6ef-fb48cb23bf6f"
+conversation_id = "019d1a55-9f2f-7283-a6ef-fb48cb23bf6f"
+message_id = "019d4992-f2be-71b1-9d0f-b91c7ef59b55"
+domain_id = "ingestion"
+bounded_context_id = "canonical-history"
+occurred_at = "2026-04-01T13:55:08.387Z"
+observed_at = "2026-04-01T15:04:18.653877Z"
+imported_at = "2026-04-01T15:04:18.653877Z"
+source_acquisition = "local_session_export"
+normalization_version = "codex-sessions-v1"
+import_id = "019d4992-ebdd-75cb-8be2-f6ae46bf96c1"
+
+[content_hash]
+algorithm = "sha256"
+value = "a8458672ad51352b36caa49e366c08c810cb79919190d2e5d31c521e4839bbef"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "conversation_object"
+native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045892-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045892-agent_message"
+
+[[raw_objects]]
+kind = "session_index"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/session_index.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session index JSONL"
+
+[[raw_objects]]
+kind = "session_transcript"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/sessions/2026/03/22/rollout-2026-03-22T16-33-51-019d1741-0a08-7121-9253-044af381b61a.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session transcript JSONL"
+
+[body]
+provider_message_id = "line-045892-agent_message"
+role = "assistant"
+model_name = "gpt-5.4"
+sequence_hint = 4579
+
+[[body.segments]]
+kind = "plain_text"
+text = "I’ve confirmed the practical prerequisites:\n- `gh` is installed and authenticated as `IvanTheGeek`\n- the current doctrine already favors curated bootstrap extractions over history-rewrite extraction\n- `NEXUS-EventStore` is a very real split candidate at about `1023M`\n\nTwo decisions materially affect the extraction plan, so I’m locking those with you before I finalize it."
+

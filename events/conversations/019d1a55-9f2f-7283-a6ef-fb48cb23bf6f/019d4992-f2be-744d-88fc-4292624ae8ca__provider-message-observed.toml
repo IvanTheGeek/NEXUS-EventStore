@@ -1,0 +1,54 @@
+schema_version = 1
+event_id = "019d4992-f2be-744d-88fc-4292624ae8ca"
+event_kind = "provider_message_observed"
+stream_kind = "conversation"
+stream_id = "019d1a55-9f2f-7283-a6ef-fb48cb23bf6f"
+conversation_id = "019d1a55-9f2f-7283-a6ef-fb48cb23bf6f"
+message_id = "019d4992-f2be-7f30-8904-929f207283be"
+domain_id = "ingestion"
+bounded_context_id = "canonical-history"
+occurred_at = "2026-04-01T14:05:19.389Z"
+observed_at = "2026-04-01T15:04:18.653877Z"
+imported_at = "2026-04-01T15:04:18.653877Z"
+source_acquisition = "local_session_export"
+normalization_version = "codex-sessions-v1"
+import_id = "019d4992-ebdd-75cb-8be2-f6ae46bf96c1"
+
+[content_hash]
+algorithm = "sha256"
+value = "562580c8b91c3152cc3b768d7d52b8f6b07cbc15bb764462d4e19db2ba3e950e"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "conversation_object"
+native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045934-user_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045934-user_message"
+
+[[raw_objects]]
+kind = "session_index"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/session_index.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session index JSONL"
+
+[[raw_objects]]
+kind = "session_transcript"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/sessions/2026/03/22/rollout-2026-03-22T16-33-51-019d1741-0a08-7121-9253-044af381b61a.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session transcript JSONL"
+
+[body]
+provider_message_id = "line-045934-user_message"
+role = "human"
+sequence_hint = 4583
+
+[[body.segments]]
+kind = "plain_text"
+text = "PLEASE IMPLEMENT THIS PLAN:\n# Extract `NEXUS-EventStore` Into Its Own Public Repo\n\n## Summary\nCreate a new public GitHub repo `IvanTheGeek/NEXUS-EventStore` as a curated bootstrap extracted from the current `NEXUS-EMERGING/main` tip. Do not preserve per-file Git history in the new repo. Treat `NEXUS-EMERGING` as the durable pre-split origin history and the new repo as the clean canonical-history/data repo going forward.\n\nThis plan does not include any DuckDB work. Keep the current SQLite-derived working index approach unchanged.\n\n## Key Changes\n### 1. Create the new repo as a curated bootstrap\nCreate a sibling local repo at `/home/ivan/NEXUS/NEXUS-EventStore`, then create the public GitHub repo `IvanTheGeek/NEXUS-EventStore` with `gh`.\n\nThe new repo root should contain the current `NEXUS-EventStore/` contents flattened to root:\n- `README.md`\n- `docs/`\n- `examples/`\n- `events/`\n- `imports/`\n- `snapshots/`\n- `projections/`\n- `graph/`\n- `work-batches/`\n\nAdd a minimal repo-memory spine to the new repo:\n- root `AGENTS.md`\n- `docs/agent-readme.md`\n- `docs/current-focus.md`\n- `bootstrap-source.toml` recording:\n  - source repo: `NEXUS-EMERGING`\n  - source commit: current `main` tip used for extraction\n  - extraction date\n  - extraction style: curated bootstrap\n\nAdd a root `.gitignore` that keeps the derived SQLite working index local:\n- `graph/working/index/*.sqlite`\n- `graph/working/index/*.sqlite-*`\n\n### 2. Treat the new repo as the canonical-history/data repo\n`NEXUS-EventStore` becomes the active home for:\n- canonical event files\n- import manifests\n- normalized import snapshots\n- projections\n- graph assertions\n- graph working batches and catalogs\n- commit-checkpoint manifests\n\nKeep `NEXUS-Objects` in `NEXUS-EMERGING` for now.\nKeep `NEXUS-Code` in `NEXUS-EMERGING` for now.\nDo not split code or objects as part of this extraction.\n\n### 3. Update `NEXUS-EMERGING` to use the sibling event-store repo\nRemove the committed `NEXUS-EventStore/` tree from `NEXUS-EMERGING` after the new repo is bootstrapped and pushed.\n\nChange the CLI default event-store-root resolution in `NEXUS-Code/src/Nexus.Cli/Program.fs` from “repo-local `NEXUS-EventStore` only” to this order:\n1. `NEXUS_EVENT_STORE_ROOT` environment variable, when set\n2. in-repo `NEXUS-EventStore/` if it still exists during transition\n3. sibling repo `../NEXUS-EventStore`\n4. otherwise fail clearly with a message telling the user to clone `NEXUS-EventStore` or pass `--event-store-root`\n\nApply the same sibling-aware expectation everywhere the repo currently hardcodes `/home/ivan/NEXUS/NEXUS-EMERGING/NEXUS-EventStore` in docs, examples, and hook installer defaults.\n\nUpdate hook/install guidance so commit-checkpoint automation points at the sibling event-store repo by default.\n\n### 4. Update docs and references deliberately\nIn `NEXUS-EMERGING`:\n- update root docs that currently present `NEXUS-EventStore/` as an in-repo folder\n- update repo-overview and ingestion architecture docs to describe it as a sibling repo\n- update how-to docs so local examples use the sibling event-store root or the new default resolver behavior\n- update publish/docs-site guidance so historical event-store citations use GitHub URLs pointing to the new repo\n\nDo not try to rewrite every historical content citation in one pass.\nOnly update active operational docs and high-traffic entrypoints now.\nLeave older historical references as historical unless they are part of active onboarding/runbooks.\n\n### 5. GitHub creation and bootstrap sequence\nUse this exact repo-creation shape:\n- owner: `IvanTheGeek`\n- repo: `NEXUS-EventStore`\n- visibility: public\n- default branch: `main`\n\nBootstrap flow:\n1. capture the `NEXUS-EMERGING/main` source SHA\n2. create `/home/ivan/NEXUS/NEXUS-EventStore`\n3. copy the curated event-store tree into the new repo root\n4. add the new minimal repo-memory docs and bootstrap provenance\n5. initialize Git, commit the bootstrap\n6. create the GitHub repo with `gh repo create IvanTheGeek/NEXUS-EventStore --public`\n7. push `main`\n8. only after the new repo is live, remove `NEXUS-EventStore/` from `NEXUS-EMERGING` and update `NEXUS-EMERGING` to point to the sibling repo\n\n## Test Plan\n### New `NEXUS-EventStore` repo\n- repo root is clean and self-describing after bootstrap\n- ignored SQLite files stay local and untracked\n- README, docs, examples, and provenance files are present\n- GitHub repo exists and `main` is pushed\n\n### `NEXUS-EMERGING`\n- `NEXUS-Code/tests/run-all-tests.sh` still passes after the split\n- CLI help/tests reflect the new default event-store-root behavior\n- commands that use the default event-store root succeed when the sibling repo is present\n- commands fail clearly when the sibling repo is absent and no override is supplied\n- commit-checkpoint hook installation writes the sibling event-store root into managed hook blocks\n\n### Acceptance scenarios\n- from `/home/ivan/NEXUS/NEXUS-EMERGING`, a normal CLI command works without `--event-store-root` when `/home/ivan/NEXUS/NEXUS-EventStore` exists\n- from a fresh clone of `NEXUS-EventStore`, the repo is understandable without needing chat memory\n- public GitHub links to committed event-store artifacts now point at `IvanTheGeek/NEXUS-EventStore`\n\n## Assumptions\n- the new repo name is exactly `NEXUS-EventStore`\n- it will live under the `IvanTheGeek` GitHub account\n- it will be public from day one\n- extraction style is curated bootstrap, not history rewrite\n- `NEXUS-Objects` stays in `NEXUS-EMERGING` for now\n- no DuckDB changes are part of this extraction"
+

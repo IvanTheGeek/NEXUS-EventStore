@@ -1,0 +1,55 @@
+schema_version = 1
+event_id = "019d4992-f2bf-7bf7-b049-22d126ff2576"
+event_kind = "provider_message_observed"
+stream_kind = "conversation"
+stream_id = "019d40ab-f98c-7b87-83a7-f2ca9061a89c"
+conversation_id = "019d40ab-f98c-7b87-83a7-f2ca9061a89c"
+message_id = "019d4992-f2bf-75d6-90fa-9a8c46d9867f"
+domain_id = "ingestion"
+bounded_context_id = "canonical-history"
+occurred_at = "2026-03-31T00:57:07.069Z"
+observed_at = "2026-04-01T15:04:18.653877Z"
+imported_at = "2026-04-01T15:04:18.653877Z"
+source_acquisition = "local_session_export"
+normalization_version = "codex-sessions-v1"
+import_id = "019d4992-ebdd-75cb-8be2-f6ae46bf96c1"
+
+[content_hash]
+algorithm = "sha256"
+value = "b825299ed9e816f95f9a5c464a7c922627ddd4b69bbf96396bbace64c1ee4861"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "conversation_object"
+native_id = "019d40a3-6ee0-7ae2-b138-5f7d03158065"
+conversation_native_id = "019d40a3-6ee0-7ae2-b138-5f7d03158065"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-000897-agent_message"
+conversation_native_id = "019d40a3-6ee0-7ae2-b138-5f7d03158065"
+message_native_id = "line-000897-agent_message"
+
+[[raw_objects]]
+kind = "session_index"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/session_index.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session index JSONL"
+
+[[raw_objects]]
+kind = "session_transcript"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/sessions/2026/03/30/rollout-2026-03-30T17-25-45-019d40a3-6ee0-7ae2-b138-5f7d03158065.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session transcript JSONL"
+
+[body]
+provider_message_id = "line-000897-agent_message"
+role = "assistant"
+model_name = "gpt-5.4"
+sequence_hint = 104
+
+[[body.segments]]
+kind = "plain_text"
+text = "Updated the footer on the live preview at [http://127.0.0.1:8000/](http://127.0.0.1:8000/).\n\nIt now uses the stacked layout you asked for in [main.html](/home/ivan/NEXUS/NEXUS-EMERGING/theme-overrides/main.html#L1): copyright line, the cooperation-based CC sentence, a centered CC badge, the centered `F# |> ♥` promo, the small F# Foundation notice, and then the MkDocs credit. The styling for that layout is in [light-matrix.css](/home/ivan/NEXUS/NEXUS-EMERGING/docs/assets/stylesheets/light-matrix.css#L386), and I added the official F# logo locally at [fsharp-logo.svg](/home/ivan/NEXUS/NEXUS-EMERGING/docs/assets/images/fsharp-logo.svg).\n\nFor the F# bit, I followed the Foundation’s official logo guidance: use is encouraged for activity supportive of the Foundation’s mission, and the logo should remain unchanged. Source: [F# Software Foundation logo page](https://foundation.fsharp.org/logo). This was docs-only work, so there were no code tests to add."
+

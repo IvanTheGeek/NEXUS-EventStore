@@ -1,0 +1,55 @@
+schema_version = 1
+event_id = "019d4992-f2be-7c30-8528-d27630d3f41c"
+event_kind = "provider_message_observed"
+stream_kind = "conversation"
+stream_id = "019d1a55-9f2f-7283-a6ef-fb48cb23bf6f"
+conversation_id = "019d1a55-9f2f-7283-a6ef-fb48cb23bf6f"
+message_id = "019d4992-f2be-77f3-8cc5-730cb43b6165"
+domain_id = "ingestion"
+bounded_context_id = "canonical-history"
+occurred_at = "2026-03-31T01:41:30.92Z"
+observed_at = "2026-04-01T15:04:18.653877Z"
+imported_at = "2026-04-01T15:04:18.653877Z"
+source_acquisition = "local_session_export"
+normalization_version = "codex-sessions-v1"
+import_id = "019d4992-ebdd-75cb-8be2-f6ae46bf96c1"
+
+[content_hash]
+algorithm = "sha256"
+value = "2689fc616c6019d289f0cdaff66bc927a3e1038fe5cc566976d979b1ed131405"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "conversation_object"
+native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045399-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045399-agent_message"
+
+[[raw_objects]]
+kind = "session_index"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/session_index.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session index JSONL"
+
+[[raw_objects]]
+kind = "session_transcript"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/sessions/2026/03/22/rollout-2026-03-22T16-33-51-019d1741-0a08-7121-9253-044af381b61a.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session transcript JSONL"
+
+[body]
+provider_message_id = "line-045399-agent_message"
+role = "assistant"
+model_name = "gpt-5.4"
+sequence_hint = 4535
+
+[[body.segments]]
+kind = "plain_text"
+text = "GitHub’s hard limit for a normal Git blob is `100 MB`.\n\nPractical thresholds:\n- under `50 MB`: generally fine\n- over `50 MB`: GitHub warns\n- over `100 MB`: GitHub rejects the push for that file\n\nSo our [graph-working.sqlite](/home/ivan/NEXUS/NEXUS-EMERGING/NEXUS-EventStore/graph/working/index/graph-working.sqlite) at about `56 MB` is in the warning zone, not the hard-fail zone.\n\nIf you want, I can next trace whether that file should remain tracked at all, since it looks like a classic candidate for “derived working artifact, rebuild locally” rather than “commit to repo forever.”"
+

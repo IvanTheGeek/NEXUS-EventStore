@@ -1,0 +1,41 @@
+schema_version = 1
+assertion_kind = "graph_assertion"
+fact_id = "b6609af1-674e-572c-a81f-03683079aa35"
+subject_node_id = "019d4992-f2bf-7ede-88a4-9920746d924f"
+predicate = "has_node_kind"
+
+[object]
+kind = "literal"
+value_type = "string"
+value = "message_node"
+
+[provenance]
+import_id = "019d4992-ebdd-75cb-8be2-f6ae46bf96c1"
+source_acquisition = "local_session_export"
+supporting_event_ids = ["019d4992-f2bf-7c6f-9324-7f3f0343b5aa"]
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "conversation_object"
+native_id = "019d40a3-6ee0-7ae2-b138-5f7d03158065"
+conversation_native_id = "019d40a3-6ee0-7ae2-b138-5f7d03158065"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-001260-user_message"
+conversation_native_id = "019d40a3-6ee0-7ae2-b138-5f7d03158065"
+message_native_id = "line-001260-user_message"
+
+[[raw_objects]]
+kind = "session_index"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/session_index.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session index JSONL"
+
+[[raw_objects]]
+kind = "session_transcript"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/sessions/2026/03/30/rollout-2026-03-30T17-25-45-019d40a3-6ee0-7ae2-b138-5f7d03158065.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session transcript JSONL"
+

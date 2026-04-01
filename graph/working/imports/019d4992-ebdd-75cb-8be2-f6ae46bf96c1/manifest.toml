@@ -1,0 +1,12 @@
+mode = "incremental_import_batch"
+materializer = "graph-working-import-batch-v1"
+import_id = "019d4992-ebdd-75cb-8be2-f6ae46bf96c1"
+materialized_at = "2026-04-01T15:04:20.5024479Z"
+canonical_event_count = 362
+graph_assertions_written = 3215
+derivation_elapsed_ms = 1443
+total_elapsed_ms = 1896
+event_store_root = "/home/ivan/NEXUS/NEXUS-EventStore"
+working_root = "graph/working/imports/019d4992-ebdd-75cb-8be2-f6ae46bf96c1"
+manifest_relative_path = "graph/working/imports/019d4992-ebdd-75cb-8be2-f6ae46bf96c1/manifest.toml"
+

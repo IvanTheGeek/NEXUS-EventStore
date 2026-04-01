@@ -1,6 +1,18 @@
 catalog_version = "graph-working-import-catalog-v1"
-generated_at = "2026-03-31T00:17:27.179688Z"
-entry_count = 209
+generated_at = "2026-04-01T15:04:22.4077283Z"
+entry_count = 210
+
+[[imports]]
+import_id = "019d4992-ebdd-75cb-8be2-f6ae46bf96c1"
+materialized_at = "2026-04-01T15:04:20.5024479Z"
+canonical_event_count = 362
+graph_assertions_written = 3215
+derivation_elapsed_ms = 1443
+total_elapsed_ms = 1896
+materializer = "graph-working-import-batch-v1"
+working_root = "graph/working/imports/019d4992-ebdd-75cb-8be2-f6ae46bf96c1"
+manifest_relative_path = "graph/working/imports/019d4992-ebdd-75cb-8be2-f6ae46bf96c1/manifest.toml"
+import_manifest_relative_path = "imports/019d4992-ebdd-75cb-8be2-f6ae46bf96c1.toml"
 
 [[imports]]
 import_id = "019d4140-95af-7b08-9999-ee3706696de1"

@@ -1,0 +1,55 @@
+schema_version = 1
+event_id = "019d4992-f2c0-7ea9-bd9c-2dcbee5db945"
+event_kind = "provider_message_observed"
+stream_kind = "conversation"
+stream_id = "019d40ab-f98c-7b87-83a7-f2ca9061a89c"
+conversation_id = "019d40ab-f98c-7b87-83a7-f2ca9061a89c"
+message_id = "019d4992-f2c0-7676-b614-7d15e656f080"
+domain_id = "ingestion"
+bounded_context_id = "canonical-history"
+occurred_at = "2026-03-31T02:26:23.946Z"
+observed_at = "2026-04-01T15:04:18.653877Z"
+imported_at = "2026-04-01T15:04:18.653877Z"
+source_acquisition = "local_session_export"
+normalization_version = "codex-sessions-v1"
+import_id = "019d4992-ebdd-75cb-8be2-f6ae46bf96c1"
+
+[content_hash]
+algorithm = "sha256"
+value = "4ce037998ecd7760bbc564a72409f93a7d797f55a3d633b0e282c587aac96275"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "conversation_object"
+native_id = "019d40a3-6ee0-7ae2-b138-5f7d03158065"
+conversation_native_id = "019d40a3-6ee0-7ae2-b138-5f7d03158065"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-001753-agent_message"
+conversation_native_id = "019d40a3-6ee0-7ae2-b138-5f7d03158065"
+message_native_id = "line-001753-agent_message"
+
+[[raw_objects]]
+kind = "session_index"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/session_index.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session index JSONL"
+
+[[raw_objects]]
+kind = "session_transcript"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/sessions/2026/03/30/rollout-2026-03-30T17-25-45-019d40a3-6ee0-7ae2-b138-5f7d03158065.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session transcript JSONL"
+
+[body]
+provider_message_id = "line-001753-agent_message"
+role = "assistant"
+model_name = "gpt-5.4"
+sequence_hint = 218
+
+[[body.segments]]
+kind = "plain_text"
+text = "Replace the Fastmail-hosted `index.html` with this. It keeps the current page intact and makes `NEXUS docs` link to [https://ivanthegeek.github.io/NEXUS-EMERGING/](https://ivanthegeek.github.io/NEXUS-EMERGING/).\n\n```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>IvanTheGeek.com</title>\n  <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n  <link href=\"https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Exo+2:wght@300;400;700&display=swap\" rel=\"stylesheet\">\n  <style>\n    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }\n\n    :root {\n      --bg: #e8f0e8;\n      --surface: #f0f7f0;\n      --border: #a8c8a8;\n      --border-strong: #6a9e6a;\n      --accent: #1a6e1a;\n      --accent-hover: #0f4e0f;\n      --accent2: #d4870a;\n      --text: #0a1a0a;\n      --muted: #4a6e4a;\n    }\n\n    html, body {\n      height: 100%;\n      background: var(--bg);\n      color: var(--text);\n      font-family: 'Exo 2', sans-serif;\n      overflow-x: hidden;\n    }\n\n    body::before {\n      content: '';\n      position: fixed;\n      inset: 0;\n      background: repeating-linear-gradient(\n        0deg,\n        transparent,\n        transparent 3px,\n        rgba(0,0,0,0.015) 3px,\n        rgba(0,0,0,0.015) 4px\n      );\n      pointer-events: none;\n      z-index: 100;\n    }\n\n    .grid-bg {\n      position: fixed;\n      inset: 0;\n      background-image:\n        linear-gradient(var(--border) 1px, transparent 1px),\n        linear-gradient(90deg, var(--border) 1px, transparent 1px);\n      background-size: 60px 60px;\n      opacity: 0.55;\n      animation: gridShift 20s linear infinite;\n    }\n\n    @keyframes gridShift {\n      0%   { background-position: 0 0; }\n      100% { background-position: 60px 60px; }\n    }\n\n    .orb {\n      position: fixed;\n      width: 700px;\n      height: 700px;\n      border-radius: 50%;\n      background: radial-gradient(circle, rgba(26,110,26,0.08) 0%, transparent 70%);\n      top: 50%;\n      left: 50%;\n      transform: translate(-50%, -50%);\n      pointer-events: none;\n      animation: pulse 6s ease-in-out infinite;\n    }\n\n    @keyframes pulse {\n      0%, 100% { opacity: 0.7; transform: translate(-50%, -50%) scale(1); }\n      50%       { opacity: 1;   transform: translate(-50%, -50%) scale(1.1); }\n    }\n\n    .container {\n      position: relative;\n      z-index: 10;\n      min-height: 100vh;\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center;\n      padding: 2rem;\n      gap: 2.5rem;\n    }\n\n    .identity {\n      text-align: center;\n      animation: fadeDown 0.8s ease forwards;\n      opacity: 0;\n      transform: translateY(-20px);\n    }\n\n    @keyframes fadeDown {\n      to { opacity: 1; transform: translateY(0); }\n    }\n\n    .handle {\n      font-family: 'Share Tech Mono', monospace;\n      font-size: clamp(2.2rem, 6vw, 4rem);\n      color: var(--accent);\n      letter-spacing: 0.05em;\n      text-shadow:\n        0 0 20px rgba(26,110,26,0.3),\n        0 2px 8px rgba(26,110,26,0.15);\n    }\n\n    .handle::after {\n      content: '_';\n      animation: blink 1.2s step-end infinite;\n      color: var(--accent2);\n    }\n\n    @keyframes blink {\n      0%, 100% { opacity: 1; }\n      50%       { opacity: 0; }\n    }\n\n    .tagline {\n      margin-top: 0.6rem;\n      font-size: 0.85rem;\n      font-weight: 300;\n      letter-spacing: 0.3em;\n      text-transform: uppercase;\n      color: var(--muted);\n    }\n\n    .status-panel {\n      background: var(--surface);\n      border: 1px solid var(--border);\n      border-left: 3px solid var(--accent2);\n      padding: 1.2rem 1.8rem;\n      max-width: 560px;\n      width: 100%;\n      font-family: 'Share Tech Mono', monospace;\n      font-size: 0.8rem;\n      color: var(--muted);\n      line-height: 1.8;\n      box-shadow: 0 2px 16px rgba(0,0,0,0.06);\n      animation: fadeDown 0.8s 0.2s ease forwards;\n      opacity: 0;\n      transform: translateY(-20px);\n    }\n\n    .status-panel .label {\n      color: var(--accent2);\n      margin-right: 0.5em;\n    }\n\n    .cta-wrapper {\n      animation: fadeUp 0.8s 0.4s ease forwards;\n      opacity: 0;\n      transform: translateY(20px);\n      text-align: center;\n    }\n\n    @keyframes fadeUp {\n      to { opacity: 1; transform: translateY(0); }\n    }\n\n    .cta-label {\n      font-size: 0.75rem;\n      letter-spacing: 0.25em;\n      text-transform: uppercase;\n      color: var(--muted);\n      margin-bottom: 1rem;\n    }\n\n    .cta-link {\n      display: inline-block;\n      padding: 1.4rem 3.5rem;\n      font-family: 'Share Tech Mono', monospace;\n      font-size: clamp(1rem, 2.5vw, 1.3rem);\n      color: #fff;\n      background: var(--accent);\n      text-decoration: none;\n      letter-spacing: 0.08em;\n      clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);\n      transition: background 0.2s, box-shadow 0.2s, transform 0.15s;\n      box-shadow: 0 4px 20px rgba(26,110,26,0.3), 0 1px 4px rgba(0,0,0,0.1);\n    }\n\n    .cta-link:hover {\n      background: var(--accent-hover);\n      box-shadow: 0 6px 30px rgba(26,110,26,0.5), 0 2px 8px rgba(0,0,0,0.12);\n      transform: translateY(-2px);\n    }\n\n    .cta-link:active { transform: translateY(0); }\n\n    .cta-sublabel {\n      margin-top: 1rem;\n      font-size: 0.78rem;\n      color: var(--muted);\n      font-family: 'Share Tech Mono', monospace;\n    }\n\n    .cta-sublabel a {\n      color: var(--muted);\n      text-decoration: none;\n      border-bottom: 1px solid var(--border-strong);\n      transition: color 0.2s, border-color 0.2s;\n    }\n\n    .cta-sublabel a:hover {\n      color: var(--accent);\n      border-bottom-color: var(--accent2);\n    }\n\n    .divider {\n      width: 100%;\n      max-width: 560px;\n      height: 1px;\n      background: linear-gradient(90deg, transparent, var(--border-strong), transparent);\n    }\n\n    .footer {\n      font-size: 0.72rem;\n      color: var(--muted);\n      letter-spacing: 0.15em;\n      font-family: 'Share Tech Mono', monospace;\n      animation: fadeUp 0.8s 0.6s ease forwards;\n      opacity: 0;\n      transform: translateY(20px);\n    }\n\n    .corner {\n      position: fixed;\n      width: 60px;\n      height: 60px;\n      opacity: 0.4;\n    }\n    .corner-tl { top: 20px; left: 20px;     border-top: 2px solid var(--accent); border-left:  2px solid var(--accent); }\n    .corner-tr { top: 20px; right: 20px;    border-top: 2px solid var(--accent); border-right: 2px solid var(--accent); }\n    .corner-bl { bottom: 20px; left: 20px;  border-bottom: 2px solid var(--accent); border-left:  2px solid var(--accent); }\n    .corner-br { bottom: 20px; right: 20px; border-bottom: 2px solid var(--accent); border-right: 2px solid var(--accent); }\n  </style>\n</head>\n<body>\n  <div class=\"grid-bg\"></div>\n  <div class=\"orb\"></div>\n  <div class=\"corner corner-tl\"></div>\n  <div class=\"corner corner-tr\"></div>\n  <div class=\"corner corner-bl\"></div>\n  <div class=\"corner corner-br\"></div>\n\n  <main class=\"container\">\n\n    <div class=\"identity\">\n      <div class=\"handle\">IvanTheGeek</div>\n      <div class=\"tagline\">Systems Architect &nbsp;·&nbsp; Event Sourcing &nbsp;·&nbsp; F#</div>\n    </div>\n\n    <div class=\"status-panel\">\n      <div><span class=\"label\">&gt;</span> STATUS: Active development in progress</div>\n      <div><span class=\"label\">&gt;</span> FOCUS: Event modeling, LOGOS knowledge base</div>\n      <div><span class=\"label\">&gt;</span> REDIRECT: All public content lives in the forum</div>\n    </div>\n\n    <div class=\"cta-wrapper\">\n      <div class=\"cta-label\">// The hub for everything</div>\n      <a class=\"cta-link\" href=\"https://talkyard.ivanthegeek.com\" rel=\"noopener\">\n        &rarr; &nbsp; talkyard.ivanthegeek.com\n      </a>\n      <div class=\"cta-sublabel\">\n        Knowledge base &nbsp;·&nbsp; Notes &nbsp;·&nbsp; Projects &nbsp;·&nbsp;\n        <a href=\"https://ivanthegeek.github.io/NEXUS-EMERGING/\" rel=\"noopener\">NEXUS docs</a>\n      </div>\n    </div>\n\n    <div class=\"divider\"></div>\n\n    <div class=\"footer\">\n      &copy; 2026 IvanTheGeek.com &nbsp;&nbsp;|&nbsp;&nbsp; ivanthegeek.com &nbsp;&nbsp;|&nbsp;&nbsp; <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\" style=\"color:var(--muted);text-decoration:none;border-bottom:1px solid var(--border-strong);\">CC BY-SA 4.0</a>\n    </div>\n\n  </main>\n</body>\n</html>\n```\n\nReferences: [ivanthegeek.com](https://ivanthegeek.com/), [Fastmail website hosting](https://www.fastmail.help/hc/en-us/articles/1500000280141)"
+

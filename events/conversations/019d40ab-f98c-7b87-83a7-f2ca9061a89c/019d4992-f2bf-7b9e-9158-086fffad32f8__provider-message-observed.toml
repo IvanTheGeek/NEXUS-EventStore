@@ -1,0 +1,55 @@
+schema_version = 1
+event_id = "019d4992-f2bf-7b9e-9158-086fffad32f8"
+event_kind = "provider_message_observed"
+stream_kind = "conversation"
+stream_id = "019d40ab-f98c-7b87-83a7-f2ca9061a89c"
+conversation_id = "019d40ab-f98c-7b87-83a7-f2ca9061a89c"
+message_id = "019d4992-f2bf-7ae6-8a65-b8a28ce76659"
+domain_id = "ingestion"
+bounded_context_id = "canonical-history"
+occurred_at = "2026-03-31T00:41:46.734Z"
+observed_at = "2026-04-01T15:04:18.653877Z"
+imported_at = "2026-04-01T15:04:18.653877Z"
+source_acquisition = "local_session_export"
+normalization_version = "codex-sessions-v1"
+import_id = "019d4992-ebdd-75cb-8be2-f6ae46bf96c1"
+
+[content_hash]
+algorithm = "sha256"
+value = "85fe4ab8c66a72cd54daf95964fcff67dc089eaf1f341e4d8d3604e3842d4f8c"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "conversation_object"
+native_id = "019d40a3-6ee0-7ae2-b138-5f7d03158065"
+conversation_native_id = "019d40a3-6ee0-7ae2-b138-5f7d03158065"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-000817-agent_message"
+conversation_native_id = "019d40a3-6ee0-7ae2-b138-5f7d03158065"
+message_native_id = "line-000817-agent_message"
+
+[[raw_objects]]
+kind = "session_index"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/session_index.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session index JSONL"
+
+[[raw_objects]]
+kind = "session_transcript"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/sessions/2026/03/30/rollout-2026-03-30T17-25-45-019d40a3-6ee0-7ae2-b138-5f7d03158065.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session transcript JSONL"
+
+[body]
+provider_message_id = "line-000817-agent_message"
+role = "assistant"
+model_name = "gpt-5.4"
+sequence_hint = 92
+
+[[body.segments]]
+kind = "plain_text"
+text = "Yes. You still keep copyright.\n\nCreative Commons’ own guidance says CC licenses do not replace copyright; they work with it, and creators retain copyright while granting reuse permissions under stated terms. CC also recommends that marked text include a copyright notice with the author/rightsholder, year, and license link. Sources: [CC Licenses at a Glance](https://creativecommons.org/wp-content/uploads/2025/03/CC-Licenses-Flyer-for-UNESCO-Print.pdf), [About CC Licenses](https://creativecommons.org/share-your-work/cclicenses/), [Marking Text](https://wiki.creativecommons.org/wiki/Marking_Text), [CC BY-SA 4.0 deed](https://creativecommons.org/licenses/by-sa/4.0/).\n\nSo the safer/better footer is not just:\n`All content on this documentation site is licensed under CC BY-SA 4.0.`\n\nI’d recommend one of these instead:\n\n- Sole author:\n  `© 2026 IvanTheGeek. Except where otherwise noted, documentation content on this site is licensed under CC BY-SA 4.0.`\n- Shared authorship:\n  `© 2026 IvanTheGeek and contributors. Except where otherwise noted, documentation content on this site is licensed under CC BY-SA 4.0.`\n\nThat does two useful things:\n- identifies who holds the copyright / should be credited\n- leaves room for exceptions if some images, quotes, or third-party material are under different terms\n\nIf you want, I can patch the footer to the `IvanTheGeek and contributors` version now."
+

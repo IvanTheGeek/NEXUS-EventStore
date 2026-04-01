@@ -1,0 +1,55 @@
+schema_version = 1
+event_id = "019d4992-f2be-7c3f-9373-3ed884a6b527"
+event_kind = "provider_message_observed"
+stream_kind = "conversation"
+stream_id = "019d1a55-9f2f-7283-a6ef-fb48cb23bf6f"
+conversation_id = "019d1a55-9f2f-7283-a6ef-fb48cb23bf6f"
+message_id = "019d4992-f2be-7afc-8260-7d0929418164"
+domain_id = "ingestion"
+bounded_context_id = "canonical-history"
+occurred_at = "2026-03-31T01:32:27.017Z"
+observed_at = "2026-04-01T15:04:18.653877Z"
+imported_at = "2026-04-01T15:04:18.653877Z"
+source_acquisition = "local_session_export"
+normalization_version = "codex-sessions-v1"
+import_id = "019d4992-ebdd-75cb-8be2-f6ae46bf96c1"
+
+[content_hash]
+algorithm = "sha256"
+value = "1a9232fa159220c0eb79368d57f17d4c8c1c4a13f8557b731b82096aaf84955e"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "conversation_object"
+native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+
+[[provider_refs]]
+provider = "codex"
+object_kind = "message_object"
+native_id = "line-045273-agent_message"
+conversation_native_id = "019d1250-293c-7ef3-8df1-f5127ee80c78"
+message_native_id = "line-045273-agent_message"
+
+[[raw_objects]]
+kind = "session_index"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/session_index.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session index JSONL"
+
+[[raw_objects]]
+kind = "session_transcript"
+relative_path = "providers/codex/archive/2026-04-01T15-04-13Z__nexus-emerging__b4b00e1c/sessions/2026/03/22/rollout-2026-03-22T16-33-51-019d1741-0a08-7121-9253-044af381b61a.jsonl"
+archived_at = "2026-04-01T15:04:16.280248Z"
+source_description = "Codex session transcript JSONL"
+
+[body]
+provider_message_id = "line-045273-agent_message"
+role = "assistant"
+model_name = "gpt-5.4"
+sequence_hint = 4519
+
+[[body.segments]]
+kind = "plain_text"
+text = "`NEXUS-EMERGING` is now in the local “main only” state.\n\nWhat I did:\n- merged `cortex-repo-memory-protocol` into `main`\n- merged `penpot-surface-protocol` into `main`\n- cleaned and checkpointed the remaining `export-window-analysis` docs/EventStore tail\n- merged `export-window-analysis` into `main`\n- removed the extra linked worktrees\n- switched `/home/ivan/NEXUS/NEXUS-EMERGING` back to `main`\n- deleted the local side branches\n\nCurrent local state:\n- branch list: just `main`\n- worktrees: just `/home/ivan/NEXUS/NEXUS-EMERGING`\n- worktree status: clean\n- current `main` tip: `f5e039630` `Merge branch 'export-window-analysis'`\n\nVerification:\n- before the final export merge, I ran `/home/ivan/NEXUS/NEXUS-EMERGING/NEXUS-Code/tests/run-all-tests.sh`\n- `117` `nexus-foundation` tests passed\n- `4` `fntools.fnhci` tests passed\n- `4` `cheddarbooks.laundrylog` tests passed\n- I did not rerun after the final export merge because that last merge was docs/data/governance only and had no `NEXUS-Code` changes\n\nOne important distinction:\n- local branches/worktrees are cleaned up\n- remote refs still exist, like `origin/export-window-analysis`\n- so if you want the remote to also reflect “main only,” the next step is pruning/deleting the retired remote branches\n\nThe best next move now is exactly what you were pointing at: revisit the branch policy from a converged repo, not from a messy active-branch state. The main docs to tighten are:\n- [AGENTS.md](/home/ivan/NEXUS/NEXUS-EMERGING/AGENTS.md)\n- [docs/collaboration-protocol.md](/home/ivan/NEXUS/NEXUS-EMERGING/docs/collaboration-protocol.md)\n- [docs/decisions/0008-branch-topology-by-workstream.md](/home/ivan/NEXUS/NEXUS-EMERGING/docs/decisions/0008-branch-topology-by-workstream.md)\n\nIf you want, I can take the next pass and turn what we just did into a clearer branching-and-merging policy proposal while the repo is finally in a simple state."
+
